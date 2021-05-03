@@ -21,7 +21,7 @@ const Navigation = () => {
             <Style>
                 <Navbar bg="light" expand="lg">
                     <div>
-                        <Navbar.Brand href="/">
+                        <Navbar.Brand href="/portfolio/">
                             <img className='brandlogo' src={brandlogo} alt="knowledge" />
                             <span className='brandtitle'> knowλεδγε | egdelwΩνκ</span>
                         </Navbar.Brand>
