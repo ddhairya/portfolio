@@ -7,7 +7,9 @@ const Style = styled.div`
     .brandtitle{
         height:64px;
         font-size: 36px;
+        font-weight:500;
         vertical-align: top;
+        padding-left: 5px;
     }
     .navbar {
         background-color: #ffce02;
@@ -16,6 +18,10 @@ const Style = styled.div`
     .navbar-brand{
         text-decoration: none;
         color:white;
+
+        &:hover{
+            color:black;
+        }
     }
 `;
 
