@@ -1,0 +1,19 @@
+ <Navbar collapseOnSelect fixed='top' bg="light" expand="lg">                    
+                    <Navbar.Brand href="/portfolio/" 
+                        onMouseOver = {() => MouseOverOut(brandlogoblack, "brandlogo")}
+                        onMouseOut = {() => MouseOverOut(brandlogowhite, "brandlogo")}
+                    >
+                        <Image className='brandlogo' id='brandlogo' src={brandlogowhite} alt="knowledge" />
+                        {/* <span className='brandtitle'>knowλεδγε | egdelwΩνκ</span> */}
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="mr-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        </Nav>
+                        <Nav className="ml">
+                            <SocialMedia id="github" href="https://github.com/ddhairya" alt="GitHub" src={GitHubCyan} hoverimg={GitHubBlack}/>
+
+                        </Nav>
+                    </Navbar.Collapse>                    
+                </Navbar>
