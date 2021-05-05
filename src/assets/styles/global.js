@@ -40,6 +40,11 @@ const Style = styled.div`
         padding: 0.1rem 0.2rem;
     }
     .social_media_icon{
+
+        @media(max-width:578px){
+            width:48px;
+            margin:1rem;
+        }
         
     }
 `;

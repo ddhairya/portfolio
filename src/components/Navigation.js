@@ -51,10 +51,12 @@ const Navigation = () => {
                         <Nav.Link href="/portfolio/">Home</Nav.Link>
                         </Nav>
                         <Nav className="ml">
+                            <div>
                             <SocialMedia id="github" href="https://github.com/ddhairya" alt="GitHub" src={GitHubCyan} hoverimg={GitHubBlack}/>
-                            <SocialMedia id="linked" href="https://github.com/ddhairya" alt="Linkedin" src={LinkedinCyan} hoverimg={LinkedinBlack}/>
-                            <SocialMedia id="wordpress" href="https://github.com/ddhairya" alt="Wordpress" src={WordpressCyan} hoverimg={WordpressBlack}/>
+                            <SocialMedia id="linked" href="https://www.linkedin.com/in/ddhairya-pm-developer/" alt="Linkedin" src={LinkedinCyan} hoverimg={LinkedinBlack}/>
+                            <SocialMedia id="wordpress" href="https://ddhairya.wordpress.com/" alt="Wordpress" src={WordpressCyan} hoverimg={WordpressBlack}/>
 
+                            </div>
                         </Nav>
                     </Navbar.Collapse>                    
                 </Navbar>
