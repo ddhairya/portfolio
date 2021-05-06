@@ -16,8 +16,18 @@ const Style = styled.div`
         padding-left: 1rem;
 
         @media(max-width:578px){
+            display:none;
             font-size: 24px;
             font-weight:400;
+            padding-left: 0.2rem;
+        }
+    }
+    .brandtitlemob{
+        display:none;
+        @media(max-width:578px){
+            display:inline;
+            font-size: 24px;
+            font-weight:600;
             padding-left: 0.2rem;
         }
     }
@@ -40,6 +50,7 @@ const Style = styled.div`
         padding: 0.1rem 0.2rem;
     }
     .social_media_icon{
+        margin:1rem;
 
         @media(max-width:578px){
             width:48px;
