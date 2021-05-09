@@ -5,29 +5,20 @@ const Style = styled.div`
         width:64px;
 
         @media(max-width:578px){
-            width: 32px;
+            width: 48px;
         }
     }
     .brandtitle{
         height:64px;
-        font-size: 36px;
-        font-weight:600;
+        font-size: 32px;
+        font-weight:500;
         vertical-align: top;
-        padding-left: 1rem;
+        padding: 1rem;
+        margin-right: 1rem;
 
         @media(max-width:578px){
-            display:none;
-            font-size: 24px;
-            font-weight:400;
-            padding-left: 0.2rem;
-        }
-    }
-    .brandtitlemob{
-        display:none;
-        @media(max-width:578px){
-            display:inline;
-            font-size: 24px;
-            font-weight:600;
+            font-size: 30px;
+            font-weight:500;
             padding-left: 0.2rem;
         }
     }
@@ -38,16 +29,36 @@ const Style = styled.div`
     .navbar-brand{
         text-decoration: none;
         color:white;
-
+        align-items: center;
         &:hover{
             color:black;
             text-decoration: underline;
             text-decoration-color: #06bcee;
         }
     }
-
+    .navbar-nav {
+        align-items: center;
+    }
     .navbar-toggler {
         padding: 0.1rem 0.2rem;
+    }
+    .menuTitle{
+        font-family:'Oswald';
+        color: white !important;
+        font-size: 1.5rem;
+        margin: 0.5rem;
+
+        @media(max-width:578px){
+            font-size: 1.5rem;
+            margin: 0rem;
+        }
+
+        &:hover{
+            color:#06bcee !important;
+        }
+    }
+    .adminLogin{
+        width:48px;
     }
     .social_media_icon{
         margin:1rem;
@@ -55,9 +66,9 @@ const Style = styled.div`
         @media(max-width:578px){
             width:48px;
             margin:1rem;
-        }
-        
+        }   
     }
+    
 `;
 
 export default Style;

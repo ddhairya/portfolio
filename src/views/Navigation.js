@@ -7,10 +7,11 @@ import LinkedinCyan from "../assets/images/in_cyan.png";
 import WordpressBlack from "../assets/images/wordpress_black.png";
 import WordpressCyan from "../assets/images/wordpress_cyan.png";
 import navlogo from "../assets/images/menu.png";
+import AdminWhite from "../assets/images/admin_white.png";
 import LinkedinBlack from "../assets/images/in_black.png";
 import styled from "styled-components";
 import GlobalStyle from "../assets/styles/global";
-
+import {MouseOverOut} from "../components/GlobalFun";
 
 
 // Particular CSS
@@ -20,10 +21,8 @@ const Style = styled.div`
 }
 `;
 
-// Change the image on mouse in and out
-const MouseOverOut = (img, id) => document.getElementById(id).src = img;
 
-// 
+// Handle the social media
 const SocialMedia = ({src, alt, href, id, hoverimg}) => <a className="social_media_link" href={href} 
                                                             onMouseOver={() => MouseOverOut(hoverimg, id)} 
                                                             onMouseOut={() => MouseOverOut(src, id)} 
@@ -33,7 +32,6 @@ const SocialMedia = ({src, alt, href, id, hoverimg}) => <a className="social_med
                                                     
 const Navigation = () => {
     return(
-
         <GlobalStyle>
             <Style>
                 <Navbar collapseOnSelect fixed='top'  expand="lg">                    
@@ -42,20 +40,20 @@ const Navigation = () => {
                         onMouseOut = {() => MouseOverOut(brandlogowhite, "brandlogo")}
                     >
                         <Image className='brandlogo' id='brandlogo' src={brandlogowhite} alt="knowledge" />
-                        <span className='brandtitle'>knowλεδγε | egdelwΩνκ</span> 
-                        <span className='brandtitlemob'>knowλεδγε </span>     
+                        <span className='brandtitle'>κνΩwλεδγε </span>      
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mr-auto">
-                        <Nav.Link href="/portfolio/">Home</Nav.Link>
+                        <Nav className="mr-auto justify-content-center">
+                        <Nav.Link href="/portfolio/" className="menuTitle">Home</Nav.Link>
+                        <Nav.Link href="/portfolio/" className="menuTitle">About Me</Nav.Link>
+                        <Nav.Link href="/portfolio/" className="menuTitle"><Image className="adminLogin" alt="admin" src={AdminWhite}/></Nav.Link>
                         </Nav>
                         <Nav className="ml">
                             <div>
                                 <SocialMedia id="github" href="https://github.com/ddhairya" alt="GitHub" src={GitHubCyan} hoverimg={GitHubBlack}/>
                                 <SocialMedia id="linked" href="https://www.linkedin.com/in/ddhairya-pm-developer/" alt="Linkedin" src={LinkedinCyan} hoverimg={LinkedinBlack}/>
                                 <SocialMedia id="wordpress" href="https://ddhairya.wordpress.com/" alt="Wordpress" src={WordpressCyan} hoverimg={WordpressBlack}/>
-                                
                             </div>
                         </Nav>
                     </Navbar.Collapse>                    

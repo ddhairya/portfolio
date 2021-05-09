@@ -1,13 +1,13 @@
 import './App.css';
-import Navigation from "./components/Navigation";
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import Navigation from "./views/Navigation";
+import Blog from "./views/Blog";
 import React from 'react';
 
 function App() {
   return (
     <React.Fragment>
-    <Navigation/>
-    
+      <Navigation/>
+      <Blog/>
     </React.Fragment>
   );
 }
