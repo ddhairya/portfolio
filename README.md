@@ -11,5 +11,6 @@ The [project](https://ddhairya.github.io/portfolio/) timeline, how and what is b
 
 The Navigation Bar compoment is been created and imported in App.js.\
 It contains a Brand Logo and two menu i.e. Main Menu and a Social Media Menu.\
-On hover a gloal function is been called out and which will change the image src using document.getElementId(), resulting in a better UI.
+On hover a gloal function is been called out and which will change the image src using document.getElementId(), resulting in a better UI.\
+
 ** Later stage will add Firebase Authentication**
