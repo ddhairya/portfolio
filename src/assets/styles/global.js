@@ -68,6 +68,16 @@ const Style = styled.div`
             margin:1rem;
         }   
     }
+    .content{
+        margin-top:7rem;
+        @media(max-width:578px){
+          margin-top:6rem;
+        }
+        @media(min-width:992px){
+            margin-top:8rem;
+        }
+      }
+      
     
 `;
 

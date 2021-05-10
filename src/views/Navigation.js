@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavLink, Image } from 'react-bootstrap';
+import { Navbar, Nav, Image } from 'react-bootstrap';
 import brandlogowhite from "../assets/images/logo_white.png";
 import brandlogoblack from "../assets/images/logo_black.png";
 import GitHubBlack from "../assets/images/github_black.png";
@@ -7,11 +7,12 @@ import LinkedinCyan from "../assets/images/in_cyan.png";
 import WordpressBlack from "../assets/images/wordpress_black.png";
 import WordpressCyan from "../assets/images/wordpress_cyan.png";
 import navlogo from "../assets/images/menu.png";
-import AdminWhite from "../assets/images/admin_white.png";
+import AdminBlack from "../assets/images/admin_black.png";
 import LinkedinBlack from "../assets/images/in_black.png";
 import styled from "styled-components";
 import GlobalStyle from "../assets/styles/global";
 import {MouseOverOut} from "../components/GlobalFun";
+import {Link} from "react-router-dom";
 
 
 // Particular CSS
@@ -35,7 +36,7 @@ const Navigation = () => {
         <GlobalStyle>
             <Style>
                 <Navbar collapseOnSelect fixed='top'  expand="lg">                    
-                    <Navbar.Brand href="/portfolio/" 
+                    <Navbar.Brand as={Link} to="/portfolio/" 
                         onMouseOver = {() => MouseOverOut(brandlogoblack, "brandlogo")}
                         onMouseOut = {() => MouseOverOut(brandlogowhite, "brandlogo")}
                     >
@@ -45,9 +46,9 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto justify-content-center">
-                        <Nav.Link href="/portfolio/" className="menuTitle">Home</Nav.Link>
-                        <Nav.Link href="/portfolio/" className="menuTitle">About Me</Nav.Link>
-                        <Nav.Link href="/portfolio/" className="menuTitle"><Image className="adminLogin" alt="admin" src={AdminWhite}/></Nav.Link>
+                            <Nav.Link as={Link} eventKey="1" to="/portfolio/" className="menuTitle">Home</Nav.Link>
+                            <Nav.Link as={Link} eventKey="2" to="/portfolio/about" className="menuTitle ">About Me</Nav.Link>
+                            <Nav.Link as={Link} eventKey="3" to="/portfolio/admin" className="menuTitle"><Image className="adminLogin" alt="admin" src={AdminBlack}/></Nav.Link>
                         </Nav>
                         <Nav className="ml">
                             <div>
