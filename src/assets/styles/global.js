@@ -76,8 +76,26 @@ const Style = styled.div`
         @media(min-width:992px){
             margin-top:8rem;
         }
-      }
-      
+    }
+    .jumbotron {
+        padding:2rem;
+        background-color:transparent;
+    }  
+    .tileHeader{
+        color:#06bcee !important;
+        font-family:'Oswald';
+        background-color: transparent;
+        font-size:16px;
+        padding:0.75rem 0.5rem;
+        @media(max-width:578px){
+            font-size:12px;
+        }
+    }
+    .tileBody{
+        color:black !important;
+        font-family:'Omnes';
+        font-size:15px;
+    }
     
 `;
 
