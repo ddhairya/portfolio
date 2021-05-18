@@ -87,6 +87,7 @@ const Style = styled.div`
         background-color: transparent;
         font-size:16px;
         padding:0.75rem 0.5rem;
+        text-align: center;
         @media(max-width:578px){
             font-size:12px;
         }
@@ -96,6 +97,14 @@ const Style = styled.div`
         font-family:'Omnes';
         font-size:15px;
     }
+    .pinImage{
+        width:24px;
+        height:24px;
+        position: absolute;
+        left: 0;
+        top: -1px;
+    }
+    
     
 `;
 
