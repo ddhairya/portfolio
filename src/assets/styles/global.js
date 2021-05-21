@@ -86,7 +86,7 @@ const Style = styled.div`
         font-family:'Oswald';
         background-color: transparent;
         font-size:16px;
-        padding:0.75rem 0.5rem;
+        padding:0.75rem 0.65rem;
         text-align: center;
         @media(max-width:578px){
             font-size:12px;
