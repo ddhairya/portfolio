@@ -11,10 +11,8 @@ const Blog = () => {
     useEffect(() => {
         fetch('https://ddhairya.github.io/json/blog.json')
             .then( res => res.json())
-            .then( data => {
-                console.log(data)
-                setBlogs(data)
-            })
+            .then( data => setBlogs(data.blogs))
+            .catch( err => console.log(err))
     },[])
     return(                
         <Jumbotron > 
@@ -23,9 +21,7 @@ const Blog = () => {
                 {blogs.map((item) => CardDisplay(item))}
             </CardColumns>
             {/* Load the data from firestore */}
-            <CardColumns>
-                {blogs.map((item) => CardDisplay(item))}
-            </CardColumns>
+            
         </Jumbotron>
         
     )
