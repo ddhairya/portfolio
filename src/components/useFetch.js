@@ -6,7 +6,11 @@ const useFetch = (url) => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        fetch(url)
+        // purposely making 500 ms delay to display the loading effect.
+        setTimeout(() => {
+
+
+            fetch(url)
             .then( res => { 
                 if (!res.ok){
                     throw Error('Could no Fetch the data for that resource path')
@@ -27,6 +31,9 @@ const useFetch = (url) => {
                 setIsLoading(false)
                 setError(err.message)
             })
+
+
+        },500)        
     },[url])
 
     return { data, isLoading, error}

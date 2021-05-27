@@ -104,7 +104,21 @@ const Style = styled.div`
         left: 0;
         top: -1px;
     }
-    
+    .firebaseContainer{
+        margin: 2rem 1rem;
+        cursor:grab;
+    }
+    .firebaseText{
+        position: relative;
+        left: -20px;
+        background-color: #06bcee;
+        border-radius: 30px;
+        padding: 0.15rem 1rem;
+        font-family: 'Oswald';
+    }
+    .firebaseicon{
+        width:18px;
+    }
     
 `;
 
