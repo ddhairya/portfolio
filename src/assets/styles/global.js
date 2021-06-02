@@ -107,6 +107,9 @@ const Style = styled.div`
     .firebaseContainer{
         margin: 2rem 1rem;
         cursor:grab;
+        @media(max-width:578px){
+            margin: 2rem 0.5rem;
+        }
     }
     .firebaseText{
         position: relative;
@@ -115,6 +118,11 @@ const Style = styled.div`
         border-radius: 30px;
         padding: 0.15rem 1rem;
         font-family: 'Oswald';
+        @media(max-width:578px){
+            left: -17px;
+            padding: 0.15rem 0.5rem;
+            border-radius: 10px;
+        }
     }
     .firebaseicon{
         width:18px;

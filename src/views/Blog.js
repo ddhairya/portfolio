@@ -6,17 +6,29 @@ import GlobalStyle from "../assets/styles/global";
 import firebaseCyan from "../assets/images/firebase.png";
 import firebaseBlack from "../assets/images/firebase_black.png";
 import LoadingEffect from "../components/LoadingEffect";
+import firebase from "../model/Firebase";
 
 
 const Blog = () => {
-
     
-    const [firebaseCont, setFirebase] = useState(false)
+    const [firebaseLoading, setFirebaseLoading] = useState(false)
     const { data: blogs, isLoading, error} = useFetch('https://ddhairya.github.io/json/blog.json')
-    
+    const ref=firebase.firestore().collection('blogs');
+    const [fireBlogs,setFireBlogs]=useState([])
+   
     const firebaseFun = () => {
-        setFirebase(! firebaseCont)
-        console.log("Clicked")
+        setFirebaseLoading(true)
+        ref.onSnapshot((querySnapshot) => {
+            const item = []
+            querySnapshot.forEach((blog) => {
+                item.push(blog.data())
+                // console.log(blog.data())
+            });
+            setFireBlogs(item)
+            setFirebaseLoading(false)
+            // console.log(fireBlogs)
+        })
+        
     }
     return( 
         <GlobalStyle>
@@ -30,14 +42,20 @@ const Blog = () => {
                 <CardColumns>                
                     {blogs.map((item) => CardDisplay(item))}
                 </CardColumns>
+                
             }
             {/* Load the data from firestore */}
             
             <div className="firebaseContainer" onClick={() => firebaseFun()}>
-                <Image className="brandlogo" src={firebaseCyan}/> <span className="firebaseText">Click to load from <Image className="firebaseicon" src={firebaseBlack} /> firebase </span>
+                <Image className="brandlogo" src={firebaseCyan}/> <span className="firebaseText">Load from firebase <Image className="firebaseicon" src={firebaseBlack} /> firestore </span>
             </div>
             
-            {firebaseCont && <LoadingEffect/>}
+            {firebaseLoading && <LoadingEffect/>}
+            {! firebaseLoading && 
+                <CardColumns>
+                    {fireBlogs.map((item) => CardDisplay(item))}
+                </CardColumns>
+            }
             
         </Jumbotron>
         </GlobalStyle>               
