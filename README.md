@@ -5,6 +5,7 @@ In this [project](https://ddhairya.github.io/portfolio/) have tried to includes 
 ## Available Use of Libraies and Technologies :
 1.  Bootstrap
 2.  react-router-dom
+3.  firebase
 
 The [project](https://ddhairya.github.io/portfolio/) timeline, how and what is been added:
 
@@ -17,5 +18,10 @@ On hover a gloal function is been called out and which will change the image src
 ### `react-router-dom`
 
 The Nav Bar contain react-router-dom links to let react handle the request for the link instead of reaching to the server on every click. Resulting in faster performance and better user experience.
+
+### `firebase`
+
+Implemented **firebase firestore** to get the data from database. To tighten the security, have given only read access in the firestore and in addition to that APIs will be accessible only if it's coming from a particular site.
+The implementation is a real time, so whenever any modification is done in firestore without any refresh it will reflect in the site.
 
 **Later stage will add Firebase Authentication**
