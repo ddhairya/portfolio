@@ -46,10 +46,10 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto justify-content-center">
-                            <Nav.Link as={Link} eventKey="1" to="/portfolio/" className="menuTitle">Home</Nav.Link>
+                            <Nav.Link as={Link} eventkey="1" to="/portfolio/project" className="menuTitle">Projects</Nav.Link>
                             {/* <Nav.Link as={Link} eventKey="2" to="/portfolio/about" className="menuTitle ">About Me</Nav.Link> */}
-                            <a eventKey="2" href="https://ddhairya.wordpress.com/aboutme/" className="menuTitle ">About Me</a>
-                            <Nav.Link as={Link} eventKey="3" to="/portfolio/admin" className="menuTitle"><Image className="adminLogin" alt="admin" src={AdminBlack}/></Nav.Link>
+                            <a  href="https://ddhairya.wordpress.com/aboutme/" className="menuTitle hoverNone">About Me</a>
+                            <Nav.Link as={Link} eventkey="3" to="/portfolio/admin" className="menuTitle"><Image className="adminLogin" alt="admin" src={AdminBlack}/></Nav.Link>
                         </Nav>
                         <Nav className="ml">
                             <div>

@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const Style = styled.div`
+    .cyanColor{
+        color:#06bcee
+    }
     .brandlogo{
         width:64px;
 
@@ -57,6 +60,11 @@ const Style = styled.div`
             color:#06bcee !important;
         }
     }
+    .hoverNone {
+        &:hover{
+            text-decoration: none;
+        }
+    }
     .adminLogin{
         width:48px;
     }
@@ -81,6 +89,18 @@ const Style = styled.div`
         padding:2rem;
         background-color:transparent;
     }  
+    .card-columns {
+      
+        @media (min-width:840px){
+            column-count:3;
+        }
+        @media(max-width: 839px) {
+            column-count:2;
+        }
+        @media(max-width:499px){
+            column-count:1;
+        }
+    }
     .tileHeader{
         color:#06bcee !important;
         font-family:'Oswald';
@@ -126,6 +146,34 @@ const Style = styled.div`
     }
     .firebaseicon{
         width:18px;
+    }
+    .carousel{
+        align-self: center;
+    }
+    .projectFlexDirCol{
+        @media(max-width: 840px){
+            flex-direction: column !important;
+        }
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+        background-color: #06bcee;
+        border-radius: 5rem;
+        padding: 0.5rem;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        opacity: 1 !important;
+    }
+    .carousel-item-next{
+        display: none !important;
+    }
+    .carousel-indicators li{
+        background-color: #06bcee;
+    }
+    .projectImage{
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
     }
     
 `;

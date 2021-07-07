@@ -4,6 +4,7 @@ import Navigation from "./views/Navigation";
 import Blog from "./views/Blog";
 import AboutMe from "./views/AboutMe";
 import Admin from "./views/Admin";
+import Project from "./views/Project";
 import React from 'react';
 import { BrowserRouter as Router, Switch,  Route } from "react-router-dom";
 
@@ -16,6 +17,7 @@ function App() {
         <div className="content">
           <Switch>
             <Route exact path="/portfolio/"><Blog/> </Route>
+            <Route exact path="/portfolio/project"><Project/> </Route>
             <Route exact path="/portfolio/about"><AboutMe/> </Route>
             <Route exact path="/portfolio/admin"><Admin/> </Route>
           </Switch>
