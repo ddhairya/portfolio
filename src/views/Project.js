@@ -1,4 +1,4 @@
-import {Jumbotron, Card} from "react-bootstrap";
+import {Jumbotron} from "react-bootstrap";
 import python from "../assets/images/projects/python.png";
 import ProjectCard from "../components/ProjectCard";
 

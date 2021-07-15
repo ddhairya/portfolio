@@ -171,7 +171,7 @@ const Style = styled.div`
     }
     .projectImage{
         width: 100%;
-        height: 400px;
+        height: 500px;
         background-size: cover;
         background-position: center;
     }
