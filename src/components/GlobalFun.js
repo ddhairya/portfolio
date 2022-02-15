@@ -4,10 +4,7 @@ const MouseOverOut = (img, id) => document.getElementById(id).src = img;
 const CollapseToggleMenu = () => {
     let element = document.getElementById("responsive-navbar-nav")
     let element2 = document.getElementsByClassName("navbar-toggler")
-    // console.log(element[0])
-    // element[0].classList.remove("show");
-    //console.log(element.classList )
-    //element.classList.add("collapsing")
+    
     let result = element.classList.contains("show");
     console.log(element)
     if (result){        
